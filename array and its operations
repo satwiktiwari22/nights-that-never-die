@@ -1,0 +1,71 @@
+#include<stdio.h>
+
+int main(){
+	int n,c,e,i,s,v,arr1[n];
+	char t='y';
+	printf("Creating an array -");
+	printf("\nEnter the size of array : ");
+	scanf("%d",&n);
+	printf("How many elements do you want to enter : ");
+	scanf("%d",&e);
+	for(i=0;i<e;i++){
+		printf("Enter elememt at %d index : ",i);
+		scanf("%d",&arr1[i]);			
+	}
+	while(t=='y'){
+	
+	printf("\nOperations - ");
+	
+	printf("\n1. Search");
+	printf("\n2. Insert");
+	printf("\n3. Update");
+	printf("\n4. Delete");
+	printf("\n5. Display");
+	printf("\n6. Merge");
+	printf("\n7. Append");
+	
+	
+	printf("\nChoose an option from above : ");
+	scanf("%d",&c);
+	switch(c){
+		case 1:
+			
+			printf("Enter the element you want to search : ");
+			scanf("%d",&s);
+			for(i=0;i<e;i++){
+				if(s==arr1[i]){
+					printf("Element found at %d index",i);
+					break;
+				}	
+			}
+			break;
+		case 3:
+			printf("Enter the position you want to update : ");
+			scanf("%d",&s);
+			printf("Enter the updated value : ");
+			scanf("%d",&v);	
+			arr1[s]=v;
+			printf("Updated Array arr1 : { ");
+			for(i=0;i<e;i++){
+				printf("%d ",arr1[i]);	
+			}
+			printf(" }");
+			break;
+			
+		case 5:
+			printf("Array arr1 : { ");
+			for(i=0;i<e;i++){
+				printf("%d ",arr1[i]);	
+			}
+			printf(" }");
+			break;
+			
+			
+	}
+	printf("\nDo you want to continue : ");
+	scanf("%s",&t);
+	
+}
+		
+	return 0;
+}
