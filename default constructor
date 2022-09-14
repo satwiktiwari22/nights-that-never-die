@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+class complx{
+	float real;
+	float imag;
+	public:
+	void show_complx(){
+	cout<<real<<"+"<<imag<<"i";}
+	complx(){
+	    real=12;
+	    imag=76;
+	}
+
+	 
+};
+int main(){
+	complx a;
+	a.show_complx();
+	return 0;
+}
