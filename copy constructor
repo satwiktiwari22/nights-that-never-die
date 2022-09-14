@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+class complx{
+	float real;
+	float imag;
+	public:
+	void show_complx(){
+	cout<<real<<"+"<<imag<<"i";}
+ 	complx(float a,float b){ //parameterized constructor
+ 		real=a;
+ 		imag=b;
+ 	    
+ 	}
+ 	complx(const complx &a){ //copy constructor
+ 		real=a.real;
+ 		imag=a.imag;
+	 }
+
+	 
+};
+
+int main(){
+	complx a(12,56);
+	complx b=a;
+	b.show_complx();
+	
+	
+	return 0;
+}
