@@ -1,21 +1,23 @@
 #include<iostream>
 using namespace std;
-class complx{
-	float real;
-	float imag;
+class values {
+	int x;
+	int y;
 	public:
-	void show_complx(){
-	cout<<real<<"+"<<imag<<"i";}
- 	complx(float a,float b){
- 	    real=a;
- 	    imag=b;
- 	}
+		getx(){
+			cout<<"x = "<<x<<endl;
+		}
+		gety(){
+			cout<<"y = "<<y<<endl;
+		}
+		values(int x1,int y1){
+			x=x1;
+			y=y1;
+		}
 };
-
 int main(){
-	complx a(2.13,7.4);
-	a.show_complx();
-	
-	
+	values a(2,3);
+	a.getx();
+	a.gety();
 	return 0;
 }
