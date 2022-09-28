@@ -1,20 +1,20 @@
 #include<iostream>
+#include<cmath>
 using namespace std;
-class complx{
-	float real;
-	float imag;
+class power {
+	int n;
+	int p;
 	public:
-	void show_complx(){
-	cout<<real<<"+"<<imag<<"i";}
-	complx(){
-	    real=12;
-	    imag=76;
-	}
-
-	 
+		print(){
+			cout<<"n^p = "<<pow(n,p)<<endl;
+		}
+		power(){
+			n=9;
+			p=3;
+		}
 };
 int main(){
-	complx a;
-	a.show_complx();
+	power a;
+	a.print();
 	return 0;
 }
