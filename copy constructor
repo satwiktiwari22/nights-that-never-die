@@ -1,23 +1,30 @@
 #include<iostream>
+#include<cmath>
 using namespace std;
-class values {
-	int x;
-	int y;
+class coordinate {
+	float x;
+	float y;
 	public:
-		getx(){
-			cout<<"x = "<<x<<endl;
+		void print(){
+			cout<<"x coordinate : "<<x<<endl;
+			cout<<"y coordinate : "<<y<<endl;
 		}
-		gety(){
-			cout<<"y = "<<y<<endl;
+		
+		coordinate(){
+			x=9.3;
+			y=7.2;
 		}
-		values(int x1,int y1){
-			x=x1;
-			y=y1;
+		coordinate(const coordinate &a){
+			x=a.x;
+			y=a.y;
 		}
 };
 int main(){
-	values a(2,3);
-	a.getx();
-	a.gety();
+	coordinate a;
+	cout<<"For a : "<<endl;
+	a.print();
+	coordinate b=a;
+	cout<<"\nFor b : "<<endl;
+	b.print();
 	return 0;
 }
