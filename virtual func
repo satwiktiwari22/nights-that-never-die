@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+class A{
+	int a;
+	public:
+		virtual void show(){
+			cout<<"a";
+		}
+};
+class B:public A{
+	public:
+		void show(){
+			cout<<"b";
+		}
+};
+void get(A& a){
+	a.show();
+	
+}
+int main(){
+	cout<<"Class A : ";
+	A satwik;
+	get(satwik);
+	cout<<"\nClass B : ";
+	B tiwari;
+	get(tiwari);
+	
+	
+	
+	return 0;
+	
+}
