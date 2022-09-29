@@ -1,0 +1,38 @@
+#include<iostream>
+using namespace std;
+class A{
+	int a;
+	public:
+		virtual void show()=0;
+		
+};
+
+class B:public A{
+	void show(){
+		cout<<"b";
+	}
+	
+};
+class C:public A{
+	void show(){
+		cout<<"c";
+	}
+	
+};
+void get(A& a){
+	a.show();
+	
+}
+int main(){
+	cout<<"Class B : ";
+	B s;
+	get(s);
+	cout<<"\nClass C : ";
+	C p;
+	get(p);
+	
+	
+	
+	return 0;
+	
+}
