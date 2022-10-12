@@ -1,0 +1,54 @@
+#include<iostream>
+using namespace std;
+class dimension{
+    protected:
+    int x,y,z;
+    public:
+    virtual void area()=0;
+};
+class rectangle:public dimension{
+    public:
+    void area(){
+        cout<<"\nFor Rectangle - "<<endl;
+        cout<<"Length : ";
+        cin>>x;
+        cout<<"Breadth : ";
+        cin>>y;
+        int a=x*y;
+        cout<<"Area : "<<a<<" sq.units";
+    }
+};
+class triangle:public dimension{
+    public:
+    void area(){
+        cout<<"\n\nFor Triangle - "<<endl;
+        cout<<"Height : ";
+        cin>>x;
+        cout<<"Base : ";
+        cin>>y;
+        float a=0.5*x*y;
+        cout<<"Area : "<<a<<" sq.units";
+    }
+};
+class square:public dimension{
+    public:
+    void area(){
+        cout<<"\n\nFor Square - "<<endl;
+        cout<<"Side : ";
+        cin>>z;
+        int a=z*z;
+        cout<<"Area : "<<a<<" sq.units";
+    }
+};
+void show(dimension& a){
+    a.area();
+}
+int main(){
+    rectangle r1;
+    show(r1);
+    triangle t1;
+    show(t1);
+    square s1;
+    show(s1);
+    return 0;
+}
