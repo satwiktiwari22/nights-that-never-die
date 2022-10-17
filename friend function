@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+class coordinate{
+    int x,y;
+    public:
+    void show(){
+        cout<<"x="<<x<<" y="<<y<<endl;
+    }
+    coordinate(int a,int b){
+        x=a;
+        y=b;
+    }
+    friend void swap(coordinate&);
+};
+void swap(coordinate& a){
+    int temp=a.x;
+    a.x=a.y;
+    a.y=temp;
+}
+int main(){
+    coordinate c1(2,3);
+    cout<<"Initial Values : "<<endl;
+    c1.show();
+    swap(c1);
+    cout<<"swapped Values : "<<endl;
+    c1.show();
+    return 0;
+}
